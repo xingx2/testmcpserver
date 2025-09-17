@@ -36,7 +36,7 @@ class TimeConversionInput(BaseModel):
 
 
 def get_local_tz(local_tz_override: str | None = None) -> ZoneInfo:
-    if local_tz_override:
+    if local_tz_overrides:
         return ZoneInfo(local_tz_override)
 
     # Get local timezone from datetime.now()
